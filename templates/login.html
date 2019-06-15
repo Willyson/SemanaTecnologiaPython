@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+
+  <style>
+    
+    .col{
+      margin: .3em;
+    }
+    .h3{
+      text-align: center
+    }
+    
+
+    .container{
+      position: relative;
+      top:10em;
+      width: 30%;
+    }
+  
+  </style>
+
+  <body>
+    <div class="container">
+      
+      <div class="row">
+        <div class="col">
+              <form class="form-signin" method="POST" action="">
+              <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+        </div>          
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" placeholder="Email" name="email"  class="form-control" required autofocus />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <input type="password" placeholder="Senha" name="senha" class="form-control" required />
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+            <input type="submit" value="Entrar" id="btnEnviar" class="btn btn-lg btn-primary btn-block" />
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <p class="message">Sem cadastro? <a href="{{url_for('paginaCadastroUsuario')}}">Cria sua conta</a></p>
+          </div>
+      </div>
+
+      </form>
+    </div>
+  </body>
+</html>
+
+
+
+
