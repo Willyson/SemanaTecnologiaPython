@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastra-se!</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='basico.css') }}">
+	</head>
+
+
+
+	<style>
+		.row{
+			margin:1em;
+		}
+	</style>
+
+	<body class="bg-light">
+
+		<div class="container formCadastro">
+
+			<form class="login-form" method="POST" action="{{url_for('cadastraUsuario')}}">
+
+				<div class="row">
+					<div class="col">
+						<h3>Preencha o formulário para o cadastro!</h3>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="row">	
+						<div class="col">
+							<input type="text" placeholder="Nome" name="nome" class="form-control"  />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<input type="text" placeholder="CPF" name="cpf" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" id="cpf">
+						</div>
+						<div class="col">
+							<input type="text" placeholder="RG" name="rg" class="form-control"/>
+						</div>	
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<input type="text" placeholder="Email" name="email" class="form-control"/>
+						</div>
+						<div class="col">
+							<input type="password" placeholder="Senha" name="senha" class="form-control"/>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<input type="text" placeholder="CEP" name="cep" class="form-control" />
+						</div>
+						<div class="col">
+							<input type="text" placeholder="Bairro" name="bairro" class="form-control" />
+						</div>
+						<div class="col">
+							<input type="text" placeholder="Cidade" name="cidade" class="form-control" />
+						</div>
+						<div class="col">
+							<input type="text" placeholder="UF" name="uf" class="form-control" maxlength="2"/>
+						</div>
+					</div>
+						
+
+					<div class="row">
+						<div class="col">
+							<select class="form-control" name="tipo" id="tipoUsuario"> <!--Ocultado no CSS basico.css -->
+								<option value="2">Comum</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="row">
+							<input type="submit" value="Cadastrar" id="btnEnviar" class="btn btn-primary btn-lg btn-block"/>
+						</div>
+						
+					</div>
+					<div class="col"><p class="message">Já sou registrado! <a href="{{url_for('index')}}">Entrar</a></p></div>
+					
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

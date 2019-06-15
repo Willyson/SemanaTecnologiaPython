@@ -9,9 +9,12 @@ def index():
 
 @app.route('/paginaCadastroUsuario')
 def paginaCadastroUsuario():
-    return ""
+    return render_template("cadastro.html")
 
 
+@app.route('/cadastraUsuario')
+def cadastraUsuario():
+    return "Página python que cadastra usuário"
 
 
 if __name__ == '__main__':

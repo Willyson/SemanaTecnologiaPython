@@ -1,0 +1,24 @@
+.col{
+    margin: .3em;
+ }
+
+ .h3{
+    text-align: center
+}
+  
+
+.container{
+    position: relative;
+    top:10em;
+    width: 30%;
+}
+
+
+.formCadastro{
+    width: 60%;
+}
+
+
+#tipoUsuario{
+    display: none;
+}
