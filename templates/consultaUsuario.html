@@ -1,0 +1,105 @@
+{% extends "menu.html" %}       
+{% block body %}  
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Conta</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+    
+        </table>
+    </div>
+
+</div>
+<!-- Modal de cadastro de usuário -->
+<div class="button-container">
+    <button type="button" class="button is-link" data-toggle="modal" data-target=".bd-example-modal-lg">Novo Usuário</button>
+</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h5>Preencha as informações a baixo</h5>
+            </div>
+
+            <div class="modal-body">
+                <form method="POST" action="">
+                    <div class="form-group">
+                        
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Nome" name="nome" class="form-control"  />
+                            </div>
+                        </div>    
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="CPF" name="cpf" maxlength="11" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control">
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="RG" name="rg" class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Email" name="email" class="form-control"/>
+                            </div>
+                            <div class="col">
+                                <input type="password" placeholder="Senha" name="senha" class="form-control"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="CEP" name="cep" class="form-control" />
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="UF" name="uf" class="form-control" />
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="Bairro" name="bairro" class="form-control" />
+                            </div>
+                            <div class="col">
+                                <input type="text" placeholder="Cidade" name="cidade" class="form-control" />
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-control" name="tipo">
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Comum</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <input type="submit" class="btn btn-primary" value="Registrar">
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
